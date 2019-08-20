@@ -10,10 +10,8 @@ exports.create = (req, res) => {
     }
 
     // Create a Person
-    const person = new Person({
-        name: req.body.name
-    });
-
+    const person = new Person(req.body);
+    
     // Save Person in the database
     person.save()
     .then(data => {
@@ -69,9 +67,7 @@ exports.update = (req, res) => {
     }
 
     // Find person and update it with the request body
-    Person.findByIdAndUpdate(req.params.id, {
-        name: req.body.name
-    }, {new: true})
+    Person.findByIdAndUpdate(req.params.id, req.body, {new: true})
     .then(person => {
         if(!person) {
             return res.status(404).send({
