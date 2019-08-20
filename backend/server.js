@@ -36,7 +36,7 @@ app.get('/', (req, res) => {
 
 require('./app/routes/person.routes.js')(app);
 
-const apiPort = process.env.NODE_ENV == 'development' ? 80 : 9090;
+const apiPort = process.env.NODE_ENV == 'development' ? 9090 : 80;
 // listen for requests
 app.listen(apiPort, () => {
     console.log(`Server is listening on port ${apiPort}`);
