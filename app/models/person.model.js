@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const EventParticipationSchema = mongoose.Schema({
     eventName: String,
+    photo: String,
     role: String,
     year: Number,
     isCoordinator: Boolean, // coordenador de equipe do EJC
