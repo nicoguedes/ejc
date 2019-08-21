@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const EventParticipationSchema = mongoose.Schema({
     eventName: String,
     photo: String,
-    role: String,
+    team: String,
     year: Number,
     isCoordinator: Boolean, // coordenador de equipe do EJC
     isSupport: Boolean // tio do EJC
@@ -11,6 +11,7 @@ const EventParticipationSchema = mongoose.Schema({
 
 const PersonSchema = mongoose.Schema({
     name: String,
+    dob: String,
     eventParticipations: [EventParticipationSchema]
 }, {
     timestamps: true
