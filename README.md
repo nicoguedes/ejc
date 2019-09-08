@@ -12,7 +12,7 @@ $ npm install
 $ npm start
 ```
 
-### Next Steps
+#### Next Steps
 
 - Authentication using JWT
 - Automated tests
