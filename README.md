@@ -7,7 +7,7 @@ Node.js Backend Application storing data in a MongoDB NoSQL Database to manage v
 1. Set MongoDB endpoint in [/config/database.config.js](/config/database.config.js)
 
 ```sh
-$ mongodb
+$ mongod
 $ npm install
 $ npm start
 ```
