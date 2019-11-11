@@ -1,13 +1,15 @@
+const auth = require("../middleware/auth.js");
+
 module.exports = (app) => {
     const persons = require('../controllers/person.controller.js');
 
-    app.post('/persons', persons.create);
+    app.post('/persons', auth, persons.create);
 
-    app.get('/persons', persons.findAll);
+    app.get('/persons', auth, persons.findAll);
 
-    app.get('/persons/:id', persons.findOne);
+    app.get('/persons/:id', auth, persons.findOne);
 
-    app.put('/persons/:id', persons.update);
+    app.put('/persons/:id', auth, persons.update);
 
-    app.delete('/persons/:id', persons.delete);
+    app.delete('/persons/:id', auth, persons.delete);
 }
