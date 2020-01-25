@@ -12,4 +12,4 @@ module.exports = (app) => {
     app.put('/persons/:id', auth, persons.update);
 
     app.delete('/persons/:id', auth, persons.delete);
-}
+} 
